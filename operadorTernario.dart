@@ -1,9 +1,9 @@
 void main() {
-  bool condicao = true;
+  // bool condicao = true;
   String nome = 'Ísis';
   String clima = 'Chuva';
 
-  print(condicao ? 'Condição verdadeira' : 'Condição Falsa');
+  // print(condicao ? 'Condição verdadeira' : 'Condição Falsa');
 
   String cliente = nome.toUpperCase() == 'ÍSIS' ? 'Nome Ok' : 'Nome errado';
   print(cliente);
