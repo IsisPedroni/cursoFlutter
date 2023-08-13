@@ -1,15 +1,27 @@
 void main() {
   Pessoa pessoa1 = Pessoa('Carol', 40, telefone: '');
 
-  pessoa1.apresenta();
+  print(pessoa1.idade);
 }
 
 class Pessoa {
   String nome = ' ';
-  int idade = 0;
+  int _idade = 0;
   String telefone = ' ';
 
-  Pessoa(this.nome, this.idade, {this.telefone = ''});
+  Pessoa(this.nome, int parametroIdade, {this.telefone = ''}) {
+    this._idade = parametroIdade;
+  }
+
+  void set idade(int idade) {
+    if(idade < 110){
+    this._idade = idade;
+    }
+  }
+
+  int get idade {
+    return this._idade;
+  }
 
   void apresenta() {
     print(
