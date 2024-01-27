@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  int valor =10;
+  runApp(MyApp(title: 'Aplicativo hello world', valor: valor,));
   // runApp(
   //   MaterialApp(
   //       home: Scaffold(
@@ -20,20 +21,22 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  final String title;
+  int valor;
 
+  MyApp({super.key, required this.title, required this.valor});  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Hello World'),
+          title:  Text(this.title),
         ),
         body: const Center(
           child: Text(
             'Hello Word',
             style:
-                TextStyle(fontSize: 16, color: Color.fromARGB(255, 255, 57, 7)),
+                TextStyle(fontSize: 16, color: Color.fromARGB(255, 255, 0, 0)),
           ),
         ),
       ),
