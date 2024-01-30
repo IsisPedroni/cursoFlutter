@@ -36,10 +36,9 @@ class MyApp extends StatelessWidget {
           child: Text(
             'Hello Word',
             style:
-                TextStyle(fontSize: 16, color: Color.fromARGB(255, 255, 0, 0)),
+                TextStyle(fontSize: 16, color: Colors.black),),
           ),
         ),
-      ),
-    );
+      );
   }
 }
